@@ -1,12 +1,24 @@
 <template>
+  <div>
   <Hero/>
+  <LargeCardDisplay
+      v-for="cardInfo in largeCardInfo"
+      :key="cardInfo.id"
+      :cardsSection="cardInfo"
+    />
+    </div>
+
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-  name: 'IndexPage'
-})
+import { largeCardSections, smallCardSections } from "@/assets/data.js"
+export default {
+  data(){
+    return {
+      largeCardInfo: largeCardSections,
+      smallCardSections: smallCardSections
+    }
+  }
+}
 </script>
  
