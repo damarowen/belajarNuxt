@@ -1,15 +1,15 @@
 <template>
     <div class="container">
         <h4 class="header">
-            {{ cardsSection.title }}
+            {{ largeCard.title }}
         </h4>
         <p class="snippet" >
-            {{ cardsSection.snippet }}
+            {{ largeCard.snippet }}
         </p>
         <div class="cards-container">
              <LargeCard 
-                v-for="card in cardsSection.cards"
-                :key="card.image"
+                v-for="card in largeCard.cards"
+                :key="card.id"
                 :card="card"
             />
         </div>
@@ -18,14 +18,14 @@
 
 <script>
     export default {
-        props: ['cardsSection']
+        props: ['largeCard']
     }
 </script>
 
 <style scoped>
-.container {
-    margin-top: 5rem;
-}
+    .container {
+        margin-top: 5rem;
+    }
     .header {
         font-weight: 700;
         font-size: 1.5rem;

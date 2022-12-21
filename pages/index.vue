@@ -2,9 +2,14 @@
   <div>
   <Hero/>
   <LargeCardDisplay
-      v-for="cardInfo in largeCardInfo"
-      :key="cardInfo.id"
-      :cardsSection="cardInfo"
+      v-for="largeCard in largeCardInfo"
+      :key="largeCard.id"
+      :largeCard="largeCard"
+    />
+    <SmallCardDisplay
+    v-for="smallCard in smallCardSections"
+    :key="smallCard.id"
+    :smallCard="smallCard"
     />
     </div>
 
