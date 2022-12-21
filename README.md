@@ -1,5 +1,12 @@
 # client
 
+## TODO
+
++ crud
++ loading state
++ auth
++ rating
+
 ## Build Setup
 
 ```bash
